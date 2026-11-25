@@ -2,7 +2,7 @@
 
 [English](../README.md) · 简体中文 · [繁體中文](README.zh-TW.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Deutsch](README.de.md)
 
-**让 QQ 音乐 HD 和兼容的 Android 播放器在后台继续播放。** Relay 会维持播放服务连接，以便在切换应用或锁屏时继续播放。项目起于小米平板 7 的 AxionOS 上一个问题：QQ 音乐 HD 切到后台后声音断了，进度条却还在走。
+**让 QQ 音乐 HD 和兼容的 Android 播放器在后台继续播放。** Relay 会维持播放服务连接，以便在切换应用或锁屏时继续播放。项目起于小米平板 7 上的 AxionOS 播放问题。当时 QQ 音乐 HD 切到后台后声音断了，进度条却还在走。
 
 [下载已签名的 APK](https://github.com/hanasaki-fubuki/media-service-relay/releases/latest)
 

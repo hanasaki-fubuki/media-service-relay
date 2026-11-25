@@ -2,7 +2,7 @@
 
 [English](../README.md) · [简体中文](README.zh-CN.md) · 繁體中文 · [日本語](README.ja.md) · [한국어](README.ko.md) · [Deutsch](README.de.md)
 
-**讓 QQ 音樂 HD 與相容的 Android 播放器在背景繼續播放。** Relay 會維持與播放服務的連線，讓切換應用程式或鎖定螢幕後仍可播放。這個專案源於小米平板 7 上的 AxionOS 問題：QQ 音樂 HD 切到背景後聲音中斷，進度列卻繼續走。
+**讓 QQ 音樂 HD 與相容的 Android 播放器在背景繼續播放。** Relay 會維持與播放服務的連線，讓切換應用程式或鎖定螢幕後仍可播放。這個專案源於小米平板 7 上的 AxionOS 播放問題。QQ 音樂 HD 切到背景後聲音中斷，進度列卻繼續走。
 
 [下載已簽署的 APK](https://github.com/hanasaki-fubuki/media-service-relay/releases/latest)
 

@@ -27,7 +27,7 @@ JDK 17 以上、Android SDK Platform 36、Build Tools 36.0.0 が必要です。`
 ./gradlew assembleDebug lintDebug
 ```
 
-Windows では `gradlew.bat assembleDebug lintDebug` を実行します。GitHub Actions は main ブランチへの push とプルリクエストを検証します。アプリのバージョンと一致するタグ（例: `v1.9`）を push すると、署名済み APK と SHA-256 チェックサムを公開します。
+Windows では `gradlew.bat assembleDebug lintDebug` を実行します。GitHub Actions は main ブランチへの push とプルリクエストを検証します。アプリのバージョンと一致するタグ（`v1.9` など）を push すると、署名済み APK と SHA-256 チェックサムを公開します。
 
 ## ライセンスとクレジット
 
