@@ -1,0 +1,7 @@
+<resources>
+    <style name="RelayWindow" parent="android:style/Theme.Material.NoActionBar">
+        <item name="android:windowBackground">@android:color/system_neutral1_900</item>
+        <item name="android:windowLightNavigationBar">false</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+</resources>

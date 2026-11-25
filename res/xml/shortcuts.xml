@@ -1,0 +1,11 @@
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut
+        android:shortcutId="stop-relay"
+        android:icon="@drawable/relay_icon"
+        android:shortcutShortLabel="@string/stop">
+        <intent
+            android:action="local.qqmusic.relay.STOP"
+            android:targetPackage="local.qqmusic.relay"
+            android:targetClass="local.qqmusic.relay.RelayActivity" />
+    </shortcut>
+</shortcuts>

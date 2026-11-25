@@ -1,0 +1,61 @@
+plugins {
+    id 'com.android.application' version '8.11.1'
+    id 'org.jetbrains.kotlin.android' version '2.2.10'
+    id 'org.jetbrains.kotlin.plugin.compose' version '2.2.10'
+}
+
+def licenseAssets = layout.buildDirectory.dir('generated/relay-license-assets')
+
+def bundleLicense = tasks.register('bundleLicense', Copy) {
+    from('LICENSE')
+    into(licenseAssets.map { it.dir('licenses') })
+    rename { 'GPL-3.0.txt' }
+}
+
+tasks.matching { it.name == 'preBuild' }.configureEach {
+    dependsOn(bundleLicense)
+}
+
+android {
+    namespace 'local.qqmusic.relay'
+    compileSdk 36
+    buildToolsVersion '36.0.0'
+
+    defaultConfig {
+        applicationId 'local.qqmusic.relay'
+        minSdk 34
+        targetSdk 35
+        versionCode 18
+        versionName '1.9'
+        resourceConfigurations += ['en', 'en-rGB', 'zh', 'b+zh+Hant', 'ja', 'ko', 'de']
+    }
+
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            java.srcDirs = ['src']
+            res.srcDirs = ['res']
+            assets.srcDirs = ['assets', licenseAssets]
+        }
+    }
+
+    buildFeatures {
+        compose true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
+
+kotlin {
+    compilerOptions.jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17)
+}
+
+dependencies {
+    implementation 'androidx.activity:activity-compose:1.10.1'
+    implementation 'androidx.compose.material3:material3:1.5.0-alpha12'
+    implementation 'androidx.lifecycle:lifecycle-runtime-compose:2.9.2'
+    implementation 'androidx.media3:media3-session:1.8.0'
+}
